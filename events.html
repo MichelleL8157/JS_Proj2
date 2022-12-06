@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Events Page</title>
+    <link rel="stylesheet" href="events.css" type="text/css">
+    <script>
+        document.getElementById("submit").onclick = function() {
+            var e = document.getElementById("eventChosen");
+            var value = e.value;
+            var text = e.options[e.selectedIndex].text;
+            console.log(value, text);
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Convention Events Page</h1>
+    <nav>
+        <a href="index.html" class="links">Splash Page</a>
+        <a href="guests.html" class="links">Guests Page</a>
+    </nav>
+    <p class="summary">This schedule table will list the times our featured guests will arrive and leave.<br /><br />
+        Click the drop-down arrow to learn more information about certain events.
+    </p>
+    <table>
+        <tr>
+            <th>Times</th>
+            <th>Guest Enter</th>
+            <th>Guest Exit</th>
+            <th>Special Event</th>
+        </tr>
+        <tr>
+            <td>10:00 a.m.</td>
+            <td></td>
+            <td></td>
+            <td>Convention Opening</td>
+        </tr>
+        <tr>
+            <td>11:00 a.m.</td>
+            <td>Charlie Brown</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>12:00 p.m.</td>
+            <td>
+                Mickey Mouse<br />
+                Tom Cat<br />
+                Jerry Mouse<br />
+                Tweety Bird<br />
+                Goofy<br />
+                Donald Duck
+            </td>
+            <td></td>
+            <td>
+                Red Carpet Rolls<br />
+                Fan Meetings
+            </td>
+        </tr>
+        <tr>
+            <td>1:00 p.m.</td>
+            <td>
+                Spongebob Squarepants<br />
+                Winnie the Pooh
+            </td>
+            <td>Tweety Bird</td>
+            <td>Disney Show</td>
+        </tr>
+        <tr>
+            <td>2:00 p.m.</td>
+            <td>Peppa Pig</td>
+            <td>
+                Mickey Mouse<br />
+                Goofy<br />
+                Donald Duck
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>3:00 p.m.</td>
+            <td></td>
+            <td>
+                Charlie Brown<br />
+                Spongebob Squarepants<br />
+                Winnie the Pooh
+            </td>
+            <td>
+                Tom and Jerry Live Show
+            </td>
+        </tr>
+        <tr>
+            <td>4:00 p.m.</td>
+            <td></td>
+            <td>
+                Tom Cat<br />
+                Jerry Mouse<br />
+                Peppa Pig 
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>5:00 p.m.</td>
+            <td></td>
+            <td></td>
+            <td>Convention Rewind</td>
+        </tr>
+        <tr>
+            <td>6:00 p.m.</td>
+            <td></td>
+            <td></td>
+            <td>Convention Closing</td>
+        </tr>
+    </table>
+    <h2>Special Events Info</h2>
+    <details class="featured">
+        <summary class="special">Convention Opening</summary>
+        <p class="notes">
+            The convention start at 10:00 am for all visitors.
+        </p>
+    </details><br />
+    <details class="featured">
+        <summary class="special">Red Carpet Rolls</summary>
+        <p class="notes">
+            Our featured and most esteemed guests finally arrive at the red carpet!
+        </p>
+    </details><br />
+    <details class="featured">
+        <summary class="special">Fan Meetings</summary>
+        <p class="notes">
+            Fans can finally meet face to face with popular celebrities and socialities through 
+            these one-on-one meetings, lasting 3 minutes each person.<br /><br />
+            To register for this event, visitors must apply through the online form attached under the page.
+        </p>
+    </details><br />
+    <details class="featured">
+        <summary class="special">Disney Show</summary>
+        <p class="notes">
+            Mickey Mouse, Donald Duck, and Goofy will perform a short live-action drama exclusive to 
+            this event! No spoilers to what the surprise drama will be about! Come and see for yourself!<br /><br />
+            To register for this event, visitors must apply through the online form attached under the page.
+        </p>
+    </details><br />
+    <details class="featured">
+        <summary class="special">Tom and Jerry Live Show</summary>
+        <p class="notes">
+            Tom Cat and Jerry Mouse will perform a short live-action episode exclusive to this event! The 
+            plot deals with troubles Tom and Jerry face when off to an adventure into the unknown forest. Interested? 
+            Come and see the performance for yourself!<br /><br />
+            To register for this event, visitors must apply through the online form attached under the page.
+        </p>
+    </details><br />
+    <details class="featured">
+        <summary class="special">Convention Rewind</summary>
+        <p class="notes">
+            A video will be broadcasted around the world on channel 1 to look back on the memories made 
+            today at this convention! Come seated in the main theatre to experience it in full view!<br /><br />
+            To register for this event, visitors must apply through the online form attached under the page.
+        </p>
+    </details><br />
+    <details class="featured">
+        <summary class="special">Convention Closing</summary>
+        <p class="notes">
+            The convention ends at 6:00 p.m. for all visitors.
+        </p>
+    </details><br />
+    <h2>Form Registration</h2>
+    <form>
+        <p>Are you interested in pre-registering for an event?</p>
+        <label for="eventChosen">If so, select which event from the drop-down menu.</label>
+        <select id="eventChosen">
+            <option value="fanMeetings">Fan Meetings</option>
+            <option value="disneyShow">Disney Show</option>
+            <option value="tomAndJerry">Tom and Jerry Live Show</option>
+            <option value="rewind">Convention Rewind</option>
+        </select>
+        <button type="button" id="submit">Register</button>
+        <button type="button" id="remove">Unregister For All Events</button>
+    </form>
+    <h2>Events Signed Up:</h2>
+    <p id="signedUp"></p>
+    <script src="guests.js"></script>
+</body>
+</html>
