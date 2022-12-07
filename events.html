@@ -6,15 +6,6 @@
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <title>Events Page</title>
     <link rel="stylesheet" href="events.css" type="text/css">
-    <script>
-        document.getElementById("submit").onclick = function() {
-            var e = document.getElementById("eventChosen");
-            var value = e.value;
-            var text = e.options[e.selectedIndex].text;
-            console.log(value, text);
-
-        }
-    </script>
 </head>
 <body>
     <h1>Convention Events Page</h1>
@@ -181,6 +172,6 @@
     </form>
     <h2>Events Signed Up:</h2>
     <p id="signedUp"></p>
-    <script src="guests.js"></script>
+    <script src="choose.js"></script>
 </body>
 </html>
